@@ -1,0 +1,267 @@
+
+
+:root{
+    --color-1: #f3f5fc;
+    --color-2: #0a3871;
+    --color-3: #495057;
+    --color-4: #0b88dd;
+    --color-5: #fff;
+    --color-6: #d8dfe8;
+    --color-7: #343a40;
+
+    --fuente-1: "inter";
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container_padre{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+ /* vw = ancho de la pantalla
+    vh = alto de pantalla */
+    background:var(--color-1);
+} 
+
+.texto{
+    position: absolute;
+    width: 45%;
+    height: 55%;
+    left: 10%;
+    top: 15%;
+    /* para despegar un poco de la izqu. = left de arriba pa abajo = top */
+    border: none;
+    font-family: var(--fuente-1);
+    font-style: normal;
+    /* font-styke para estolo letras, negritas, cursiva, etc */
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: var(--color-1);
+}
+
+.texto::placeholder{
+    color:var(--color-2); 
+}
+
+/* foco para quitar los bordes en los cuadros a la hora de escribir */
+
+.texto:focus,
+.texto:active{
+    border: none;
+    outline: none;
+}
+
+.conditions_for_encrypt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 80%;
+    /* ese top asegura un espaciado entre lo que se va a escribir en el cuadro y las ondiciones de escritura */
+}
+
+.conditions_for_encrypt p{
+    font-family: var(--fuente-1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color: var(--color-3);
+    opacity: 0.8;
+    /* opacity para que las letras se vean opacas */
+    flex: none;
+    /* ya que el padre es flex el debe ser lo contrario */
+    order: 1;
+    flex-grow: 0;
+}
+
+.bottoms{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* para poner los botones al inicio del espacio previamente establecido */
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 82%;
+}
+
+.btn_encrypted{
+    align-items: center;
+    justify-items: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: var(--color-4);
+    border-radius: 24px;
+    font-family: var(--fuente-1);
+    font-size: 18px;
+    line-height: 19px;
+    /* line he.. ancho de linea, grosor tipo de letra */
+    text-align: center;
+    color: var(--color-5);
+}
+
+.btn_Desencrypted{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background: var(--color-6);
+    border: 1px solid var(--color-2);
+    border-radius: 24px;
+    font-family: var(--fuente-1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-2);
+}
+
+.btn_encrypted:hover,
+.btn_Desencrypted:hover {
+    margin: 0.5%;
+    width: 25.5%;
+    padding: 1.8%;
+}
+
+/* ahora vamos a pasar el acuadro de la derecha donde va aestar el resulatdo de encriptar o desencriptar */
+
+.encrypted_text_box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 65%;
+    top: 5%;
+    background: var(--color-5);
+    box-shadow: opx 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+/* ahora se le van a dar estilos a los elementos interos de la caja de texto */
+
+.menssage_encrypted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 15%;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.menssage_encrypted h2 { 
+    width: 60%;
+    font-family: var(--fuente-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-7);
+}
+
+.menssage_encrypted p {
+    width: 80%;
+    font-family: var(--fuente-1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-3);
+}
+
+/* para cuadrar la imagen o imagenes */
+.encrypted_text_box img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+}
+
+/* ahora vamos a hacer el diseño responsive
+tablets sirven para telefonos */
+
+@media (max-width:57.5em) {
+    .container_padre{
+        display: flex;
+        flex-direction: row;
+    }
+    /* sele va a dar estilos a lo que no se le puso estilos anteriormente */
+    .encriptar_hijo{
+        width: 100%;
+    }
+
+    .texto{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .conditions_for_encrypt{
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+    .conditions_for_encrypt p{
+        font-size: 16px;
+    }
+
+    .bottoms{
+        width: 80%;
+        /* 80% pantalla */
+        left: 10%;
+        top: 70%;
+    }
+    .btn_encrypted,
+    .btn_Desencrypted{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .btn_encrypted:hover,
+    .btn_Desencrypted:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+        background-color: brown;
+    }
+
+    .encrypted_text_box{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+    .menssage_encrypted{
+        width: 100%;
+        top: 5%;
+    }
+    .encrypted_text_box img{
+        top: 0;
+        display: none;
+        visibility: hidden;
+        /* visibility es para mostrar o no la imagen, hidden = no visible */
+    }
+}
