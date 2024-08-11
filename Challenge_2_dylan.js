@@ -20,9 +20,9 @@ function encrypted() {
         establecida y por ende no va a funcionar la parte logica    */
         tituloMensaje.textContent = "the text have been encrypted with success";
         parrafo.textContent = "";
-        muñeco.src = "../imagenes/images - encriptado.jpeg";
+        muñeco.src = "./imagenes/images - encriptado.jpeg";
     } else {
-        muñeco.src = "../imagenes/images - copiar texto.png";
+        muñeco.src = "./imagenes/images - copiar texto.png";
         tituloMensaje.textContent = "There's not none text"
         parrafo.textContent = "Please, enter the text to encrypted or desencrypted"
         /* alert("Can you enter some text");
@@ -48,9 +48,9 @@ function desencrypted() {
         document.getElementById("texto").value = textoCifrado;
         tituloMensaje.textContent = "the text have been desencrypted with success";
         parrafo.textContent = "";
-        muñeco.src = "../imagenes/images - copiar texto.png";
+        muñeco.src = "./imagenes/images - copiar texto.png";
     } else {
-        muñeco.src = "../imagenes/images - copiar texto.png";
+        muñeco.src = "./imagenes/images - copiar texto.png";
         tituloMensaje.textContent = "There's not none text"
         parrafo.textContent = "Please, enter the text to encrypted or desencrypted"
         // alert("Can you enter some text");
