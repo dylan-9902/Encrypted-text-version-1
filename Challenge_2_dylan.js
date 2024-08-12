@@ -59,3 +59,18 @@ function desencrypted() {
 }
 
 
+//Permite que no se introduzca caracteres especiales
+document
+  .getElementById("texto")
+  .addEventListener("input", function (event) {
+    const pattern = /^[a-z\s]+$/;
+    const textarea = event.target;
+    const value = textarea.value;
+
+    const filteredValue = value
+      .split("")
+      .filter((char) => pattern.test(char))
+      .join("");
+    textarea.value = filteredValue;
+});
+
