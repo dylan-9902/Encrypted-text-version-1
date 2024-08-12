@@ -18,7 +18,7 @@ function encrypted() {
         document.getElementById("texto").value = textoCifrado;
         /*esta linea se deja a si ya que al ponerle texto se esta reutilizando una varibale ya 
         establecida y por ende no va a funcionar la parte logica    */
-        tituloMensaje.textContent = "the text have been encrypted with success";
+        tituloMensaje.textContent = "The text have been encrypted with success";
         parrafo.textContent = "";
         muñeco.src = "./imagenes/images - encriptado.jpeg";
     } else {
@@ -46,7 +46,7 @@ function desencrypted() {
 
     if (texto.length != 0) {
         document.getElementById("texto").value = textoCifrado;
-        tituloMensaje.textContent = "the text have been desencrypted with success";
+        tituloMensaje.textContent = "The text have been desencrypted with success";
         parrafo.textContent = "";
         muñeco.src = "./imagenes/images - copiar texto.png";
     } else {

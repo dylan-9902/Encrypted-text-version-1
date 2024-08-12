@@ -1,15 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Honk&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&display=swap');
 
 :root{
-    --color-1: #f3f5fc;
-    --color-2: #0a3871;
-    --color-3: #495057;
+    --color-1: #DDE6ED;
+    --color-2: #008170;
+    --color-3: #005B41;
     --color-4: #0b88dd;
     --color-5: #fff;
     --color-6: #d8dfe8;
     --color-7: #343a40;
 
-    --fuente-1: "inter";
+    --fuente-1: "Nanum Pen Script", cursive;
+    --fuente-2: "Montserrat", sans-serif;
 
 }
 
@@ -39,7 +40,7 @@
     font-style: normal;
     /* font-styke para estolo letras, negritas, cursiva, etc */
     font-weight: 400;
-    font-size: 32px;
+    font-size: 52px;
     line-height: 150%;
     background-color: var(--color-1);
 }
@@ -70,10 +71,10 @@
 }
 
 .conditions_for_encrypt p{
-    font-family: var(--fuente-1);
+    font-family: var(--fuente-2);
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 150%;
     color: var(--color-3);
     opacity: 0.8;
@@ -94,6 +95,7 @@
     width: 80%;
     left: 10%;
     top: 82%;
+    gap: 8px;
 }
 
 .btn_encrypted{
@@ -105,9 +107,9 @@
     background-color: var(--color-4);
     border-radius: 24px;
     font-family: var(--fuente-1);
-    font-size: 18px;
-    line-height: 19px;
-    /* line he.. ancho de linea, grosor tipo de letra */
+    font-size: 30px;
+    line-height: 12px;
+    /* line he.. ancho de linea del boton no de la letra */
     text-align: center;
     color: var(--color-5);
 }
@@ -126,8 +128,8 @@
     border-radius: 24px;
     font-family: var(--fuente-1);
     font-weight: 400;
-    font-size: 18px;
-    line-height: 19px;
+    font-size: 30px;
+    line-height: 12px;
     text-align: center;
     color: var(--color-2);
 }
@@ -136,7 +138,8 @@
 .btn_Desencrypted:hover {
     margin: 0.5%;
     width: 25.5%;
-    padding: 1.8%;
+    padding: 2%;
+    background-color: rgb(123, 216, 162);
 }
 
 /* ahora vamos a pasar el acuadro de la derecha donde va aestar el resulatdo de encriptar o desencriptar */
@@ -174,7 +177,7 @@
     font-family: var(--fuente-1);
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 35px;
     line-height: 120%;
     text-align: center;
     color: var(--color-7);
@@ -182,10 +185,10 @@
 
 .menssage_encrypted p {
     width: 80%;
-    font-family: var(--fuente-1);
+    font-family: var(--fuente-2);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 150%;
     text-align: center;
     color: var(--color-3);
@@ -197,6 +200,12 @@
     width: 80%;
     height: 50%;
     top: 15%;
+}
+
+.pie_de_pagina{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-5);
 }
 
 /* ahora vamos a hacer el diseño responsive
@@ -245,7 +254,6 @@ tablets sirven para telefonos */
         margin: 0.3%;
         width: 47.5%;
         padding: 1.8%;
-        background-color: brown;
     }
 
     .encrypted_text_box{
@@ -264,4 +272,8 @@ tablets sirven para telefonos */
         visibility: hidden;
         /* visibility es para mostrar o no la imagen, hidden = no visible */
     }
+    .encrypted_text_box p{
+        font-size: 15px;
+    }
+
 }
