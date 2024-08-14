@@ -273,7 +273,21 @@ tablets sirven para telefonos */
         /* visibility es para mostrar o no la imagen, hidden = no visible */
     }
     .encrypted_text_box p{
-        font-size: 15px;
+        font-size: 14px;
     }
 
+}
+
+@media (max-width: 31.25em) {
+    .conditions_for_encrypt p{
+        font-size: 10.3px;
+    }
+
+    .texto {
+        font-size: 40px;
+    }
+
+    .menssage_encrypted h2 {
+        font-size: 25px;
+    }
 }
