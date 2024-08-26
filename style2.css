@@ -23,8 +23,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
- /* vw = ancho de la pantalla
-    vh = alto de pantalla */
     background:var(--color-1);
 } 
 
@@ -34,11 +32,9 @@
     height: 55%;
     left: 10%;
     top: 15%;
-    /* para despegar un poco de la izqu. = left de arriba pa abajo = top */
     border: none;
     font-family: var(--fuente-1);
     font-style: normal;
-    /* font-styke para estolo letras, negritas, cursiva, etc */
     font-weight: 400;
     font-size: 52px;
     line-height: 150%;
@@ -49,7 +45,6 @@
     color:var(--color-2); 
 }
 
-/* foco para quitar los bordes en los cuadros a la hora de escribir */
 
 .texto:focus,
 .texto:active{
@@ -67,7 +62,6 @@
     width: 80%;
     left: 10%;
     top: 80%;
-    /* ese top asegura un espaciado entre lo que se va a escribir en el cuadro y las ondiciones de escritura */
 }
 
 .conditions_for_encrypt p{
@@ -78,9 +72,7 @@
     line-height: 150%;
     color: var(--color-3);
     opacity: 0.8;
-    /* opacity para que las letras se vean opacas */
     flex: none;
-    /* ya que el padre es flex el debe ser lo contrario */
     order: 1;
     flex-grow: 0;
 }
@@ -89,7 +81,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* para poner los botones al inicio del espacio previamente establecido */
     padding: 1% 0;
     position: absolute;
     width: 80%;
@@ -109,7 +100,6 @@
     font-family: var(--fuente-1);
     font-size: 30px;
     line-height: 12px;
-    /* line he.. ancho de linea del boton no de la letra */
     text-align: center;
     color: var(--color-5);
 }
