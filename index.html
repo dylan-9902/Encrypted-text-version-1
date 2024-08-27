@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
-     <link rel="shortcut icon" href="../imagenes/favicon.jpg" type="image/x-icon">
-     <link rel="stylesheet" href="style2.css">
-     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="../imagenes/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
     <div class="container_padre">
         <div class="encriptar_hijo">
-            <textarea 
-            name="texto" 
-            class="texto" 
-            id="texto" 
-            cols="30" 
-            rows="10"
-            placeholder="Please, enter the text here to encrypted or desencrypted."
-            ></textarea>
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+                placeholder="Please, enter the text here to encrypted or desencrypted."></textarea>
 
             <div class="conditions_for_encrypt">
                 <p>Please enter the text in lowercase, whithout special characteres.</p>
@@ -29,13 +23,12 @@
                 <button class="btn_encrypted" type="button" onclick="encrypted()">
                     Encrypted
                 </button>
-                <input 
-                type="button" 
-                class="btn_Desencrypted" 
-                value="Desencrypted" 
-                onclick="desencrypted()" 
-                />
-                <!--Sin importar que sea button o input ambos van a servir para hacer los mismo, se pueden programar igual  -->
+                <input type="button" class="btn_Desencrypted" value="Desencrypted" onclick="desencrypted()" />
+                <!-- para copiar el texto -->
+                <div class="boton_copiar">
+                    <img src="./imagenes/images - copiar texto 2.png" alt="Copiar texto" onclick="copyText()">
+                    <span class="boton_copiar_msg">Please click here to copy the text.</span>
+                </div>
             </div>
         </div>
         <div class="encrypted_text_box">
@@ -46,10 +39,13 @@
             </div>
         </div>
     </div>
+     <!-- aviso de texto copiado -->
+     <div class="copy_notification" id="notificationCopy" style="display: none;">
+        The text has been copied.
+    </div>
     <div class="pie_de_pagina">
         <footer> © 2024 Creado por Dylan Carreño</footer>
     </div>
 </body>
 <script src="Challenge_2_dylan.js"></script>
-
 </html>

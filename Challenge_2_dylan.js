@@ -67,3 +67,24 @@ document
     textarea.value = filteredValue;
 });
 
+//boton para copiar texto
+function copyText() {
+    const texto_copiar = document.getElementById("texto").value;
+    const notificationCopy = document.getElementById("notificationCopy");
+  
+    navigator.clipboard
+      .writeText(texto_copiar)
+      .then(() => {
+        // Mostrar la notificación de copia
+        notificationCopy.style.display = "block";
+  
+        // Ocultar la notificación después de 2 segundos
+        setTimeout(() => {
+            notificationCopy.style.display = "none";
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error("Error al copiar el texto: ", err);
+      });
+  }
+

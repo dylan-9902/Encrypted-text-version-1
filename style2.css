@@ -198,6 +198,59 @@
     background-color: var(--color-5);
 }
 
+/* Ahora vamos a hacer la parte del boton de copiar texto */
+
+.boton_copiar {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .boton_copiar .boton_copiar_msg {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .boton_copiar img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+  }
+  .boton_copiar img:hover {
+    transform: scale(1.1);
+  }
+  
+  .boton_copiar:hover .boton_copiar_msg {
+    visibility: visible;
+    opacity: 1;
+    font-size: 12px;
+  }
+
+  .copy_notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
 /* ahora vamos a hacer el diseño responsive
 tablets sirven para telefonos */
 
